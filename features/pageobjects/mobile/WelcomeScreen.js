@@ -1,6 +1,6 @@
-const Page = require("./page");
-const Actions = require("../Common/Actions");
-const CommonLib = require("../Common/CommonLib");
+const Page = require("../page");
+const Actions = require("../../Common/Actions");
+const CommonLib = require("../../Common/CommonLib");
 let timeout = 5000;
 console.log("timeout : " + timeout);
 

@@ -149,8 +149,12 @@ class Actions {
 
   async waitUntilElement(elem, elementWaitTimeout) {
     // const el = await $(elem);
-    await elem.waitUntil({ timeout: elementWaitTimeout });
+    // await elem.waitUntil({ timeout: elementWaitTimeout });
     // console.log("waitUntil element completed  ==> ", elem);
+    await browser.waitUntil(async () => await elem.isDisplayed(), {
+      timeout: elementWaitTimeout, // Maximum wait time in milliseconds (adjust as needed)
+      timeoutMsg: "Element did not become displayed within the specified timeout.",
+    });
   }
 
   async selectElementByVisibleText(elem, dropdownValue) {

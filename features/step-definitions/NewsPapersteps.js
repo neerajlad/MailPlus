@@ -1,11 +1,11 @@
 const { Given, When, Then } = require("@wdio/cucumber-framework");
 const { expect, $ } = require("@wdio/globals");
 const CommonLib = require("../Common/CommonLib");
-const ManageAccountScreen = require("../pageobjects/ManageAccountScreen");
+const ManageAccountScreen = require("../pageobjects/mobile/ManageAccountScreen");
 
-const NewspaperScreen = require("../pageobjects/NewspaperScreen");
-const SidePanelScreen = require("../pageobjects/SidePanelScreen");
-const WelcomeScreen = require("../pageobjects/WelcomeScreen");
+const NewspaperScreen = require("../pageobjects/mobile/NewspaperScreen");
+const SidePanelScreen = require("../pageobjects/mobile/SidePanelScreen");
+const WelcomeScreen = require("../pageobjects/mobile/WelcomeScreen");
 
 Given(/^I launch the app$/, async () => {
   await WelcomeScreen.clickOnbtnFallOverClose();
