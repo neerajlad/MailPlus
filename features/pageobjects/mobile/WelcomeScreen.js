@@ -13,31 +13,59 @@ class WelcomeScreen extends Page {
    */
 
   get lbl1Of5() {
-    return $("//android.widget.TextView[@text='Step 1 of 5']");
+    if (browser.isAndroid) {
+      return $("//android.widget.TextView[@text='Step 1 of 5']");
+    } else {
+      return $("ios Object");
+    }
   }
 
   get lbl2Of5() {
-    return $("//android.widget.TextView[@text='Step 2 of 5']");
+    if (browser.isAndroid) {
+      return $("//android.widget.TextView[@text='Step 2 of 5']");
+    } else {
+      return $("ios Object");
+    }
   }
 
   get lbl3Of5() {
-    return $("//android.widget.TextView[@text='Step 3 of 5']");
+    if (browser.isAndroid) {
+      return $("//android.widget.TextView[@text='Step 3 of 5']");
+    } else {
+      return $("ios Object");
+    }
   }
 
   get lbl4Of5() {
-    return $("//android.widget.TextView[@text='Step 4 of 5']");
+    if (browser.isAndroid) {
+      return $("//android.widget.TextView[@text='Step 4 of 5']");
+    } else {
+      return $("ios Object");
+    }
   }
 
   get lbl5Of5() {
-    return $("//android.widget.TextView[@text='Step 5 of 5']");
+    if (browser.isAndroid) {
+      return $("//android.widget.TextView[@text='Step 5 of 5']");
+    } else {
+      return $("ios Object");
+    }
   }
 
   get btnFallOverClose() {
-    return $("//android.widget.TextView[@text='Failover']/..//android.view.ViewGroup[1]");
+    if (browser.isAndroid) {
+      return $("//android.widget.TextView[@text='Failover']/..//android.view.ViewGroup[1]");
+    } else {
+      return $("ios Object");
+    }
   }
 
   get btnContinue() {
-    return $("//android.widget.TextView[@text='Continue']");
+    if (browser.isAndroid) {
+      return $("//android.widget.TextView[@text='Continue']");
+    } else {
+      return $("ios Object");
+    }
   }
 
   get lnkSettings() {

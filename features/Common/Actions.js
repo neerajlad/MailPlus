@@ -369,7 +369,7 @@ class Actions {
 
     // Perform the click action
     await driver.touchAction([
-      { action: "press", x: xCoordinate, y: yCoordinate },
+      { action: "mobile: tap", x: xCoordinate, y: yCoordinate },
       { action: "wait", ms: 200 }, // Wait for 1 second (adjust as needed)
       "release",
     ]);
@@ -377,17 +377,17 @@ class Actions {
     // await driver.executeScript("mobile: tap", { x: xCoordinate, y: yCoordinate });
   }
 
-  async tapByCoordinateSelector(x1, y1) {
+  async tapByCoordinateSelector(x1, y1, elem) {
     // Define the coordinates for the click
-    const xCoordinate = 300; // X-coordinate (horizontal)
-    const yCoordinate = 500; // Y-coordinate (vertical)
+    const xCoordinate = x1; // X-coordinate (horizontal)
+    const yCoordinate = y1; // Y-coordinate (vertical)
 
-    // Perform the click action
-    await driver.touchAction([
-      { action: "press", x: xCoordinate, y: yCoordinate },
-      { action: "wait", ms: 200 }, // Wait for 1 second (adjust as needed)
-      "release",
-    ]);
+    browser.touchAction({
+      action: "tap",
+      x: xCoordinate,
+      y: yCoordinate,
+      selector: elem,
+    });
     // Execute a click at specific coordinates
     // await driver.executeScript("mobile: tap", { x: xCoordinate, y: yCoordinate });
   }

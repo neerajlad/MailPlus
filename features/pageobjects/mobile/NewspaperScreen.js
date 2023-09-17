@@ -18,35 +18,67 @@ class NewspaperScreen extends Page {
   }
 
   get lblRecentIssue() {
-    return $("//android.widget.TextView[@text='Recent issues']");
+    if (browser.isAndroid) {
+      return $("//android.widget.TextView[@text='Recent issues']");
+    } else {
+      // Define for other platforms (if needed)
+    }
   }
 
   get lblRecentIssueFirstImg() {
-    return $("//android.widget.TextView[@text='Recent issues']/..//android.widget.HorizontalScrollView[2]/android.view.ViewGroup/android.view.ViewGroup[3]");
+    if (browser.isAndroid) {
+      return $("//android.widget.TextView[@text='Recent issues']/..//android.widget.HorizontalScrollView[2]/android.view.ViewGroup/android.view.ViewGroup[3]");
+    } else {
+      // Define for other platforms (if needed)
+    }
   }
 
   get lblSeeMore() {
-    return $("//android.widget.TextView[@text='SEE MORE']");
+    if (browser.isAndroid) {
+      return $("//android.widget.TextView[@text='SEE MORE']");
+    } else {
+      // Define for other platforms (if needed)
+    }
   }
 
   get btnFallOverClose() {
-    return $("//android.widget.TextView[@text='Failover']/..//android.view.ViewGroup[1]");
+    if (browser.isAndroid) {
+      return $("//android.widget.TextView[@text='Failover']/..//android.view.ViewGroup[1]");
+    } else {
+      // Define for other platforms (if needed)
+    }
   }
 
   get img10thAprEdition() {
-    return $("//android.widget.TextView[@text='10 April 2023']");
+    if (browser.isAndroid) {
+      return $("//android.widget.TextView[@text='10 April 2023']");
+    } else {
+      // Define for other platforms (if needed)
+    }
   }
 
   get ico10thAprEdition_1() {
-    return $("(//android.widget.TextView[@text='27 June 2023'])[2]");
+    if (browser.isAndroid) {
+      return $("(//android.widget.TextView[@text='27 June 2023'])[2]");
+    } else {
+      // Define for other platforms (if needed)
+    }
   }
 
   get ico10thAprEdition_1_download() {
-    return $("(//android.widget.TextView[@text='27 June 2023'])[1]/../following-sibling::android.view.ViewGroup");
+    if (browser.isAndroid) {
+      return $("(//android.widget.TextView[@text='27 June 2023'])[1]/../following-sibling::android.view.ViewGroup");
+    } else {
+      // Define for other platforms (if needed)
+    }
   }
 
   get titleTuesday27June() {
-    return $("//android.widget.TextView[@text='Tuesday, 27 June']");
+    if (browser.isAndroid) {
+      return $("//android.widget.TextView[@text='Tuesday, 27 June']");
+    } else {
+      // Define for other platforms (if needed)
+    }
   }
 
   get icoBack() {
@@ -54,15 +86,28 @@ class NewspaperScreen extends Page {
   }
 
   get lblImageCount() {
-    return $("//android.widget.TextView[@text='11']/..");
+    if (browser.isAndroid) {
+      // return $("//android.widget.TextView[@text='11']/.."); //
+      return $("//android.widget.FrameLayout[@resource-id='android:id/content']//android.widget.FrameLayout[2]");
+    } else {
+      // Define for other platforms (if needed)
+    }
   }
 
   get lblPageText() {
-    return $("//android.widget.TextView[@text='Phoebe, the chainmail champion of the Indiana Jones red carpet']");
+    if (browser.isAndroid) {
+      return $("//android.widget.TextView[@text='Phoebe, the chainmail champion of the Indiana Jones red carpet']");
+    } else {
+      // Define for other platforms (if needed)
+    }
   }
 
   get linearObject() {
-    return $("//android.widget.LinearLayout");
+    if (browser.isAndroid) {
+      return $("//android.widget.LinearLayout");
+    } else {
+      // Define for other platforms (if needed)
+    }
   }
 
   async clickOnlinearObject() {
@@ -98,8 +143,13 @@ class NewspaperScreen extends Page {
   }
 
   get lnkClose() {
-    return $("//android.widget.TextView[@text='Close']");
+    if (browser.isAndroid) {
+      return $("//android.widget.TextView[@text='Close']");
+    } else {
+      // Define for other platforms (if needed)
+    }
   }
+
   async clickOnlnkClose() {
     await Actions.waitForElementForDisplay(this.lnkClose, timeout);
     await Actions.doClickOn(this.lnkClose);
@@ -129,7 +179,7 @@ class NewspaperScreen extends Page {
 
       counter++;
 
-      if (counter >= 5) {
+      if (counter >= 15) {
         break;
       }
     } while (true);
@@ -234,6 +284,7 @@ class NewspaperScreen extends Page {
     } while (true);
   }
   async NavigateTo3Page() {
+    await CommonLib.wait(2000);
     await Actions.SwipeleftOnly();
     await CommonLib.wait(2000);
     await Actions.SwipeleftOnly();
@@ -242,14 +293,13 @@ class NewspaperScreen extends Page {
 
   async TapOnImageOn3rdPage() {
     await CommonLib.wait(2000);
-
-    await Actions.tapByCoordinate(900, 1100);
+    await Actions.tapByCoordinateSelector(900, 1100, await this.linearObject);
     console.log("tapped on 3rd page");
   }
 
   async tapOnGallary() {
     await CommonLib.wait(2000);
-    await Actions.tapByCoordinate(500, 500);
+    await Actions.tapByCoordinateSelector(500, 500, await this.lblImageCount);
     console.log("tapped on gallary");
   }
 

@@ -14,27 +14,51 @@ class ManageAccountScreen extends Page {
    */
 
   get btnSignIn() {
-    return $("//android.widget.TextView[@text='Sign in']");
+    if (driver.isAndroid) {
+      return $("//android.widget.TextView[@text='Sign in']");
+    } else {
+      return $("ios Object");
+    }
   }
 
   get txtEmail() {
-    return $("//android.widget.EditText[@resource-id='login.email']");
+    if (driver.isAndroid) {
+      return $("//android.widget.EditText[@resource-id='login.email']");
+    } else {
+      return $("ios Object");
+    }
   }
 
   get txtPassword() {
-    return $("//android.widget.EditText[@resource-id='login.password']");
+    if (driver.isAndroid) {
+      return $("//android.widget.EditText[@resource-id='login.password']");
+    } else {
+      return $("ios Object");
+    }
   }
 
   get btnSignInWithLock() {
-    return $("//android.widget.Button[@text=' SIGN IN']");
+    if (driver.isAndroid) {
+      return $("//android.widget.Button[@text=' SIGN IN']");
+    } else {
+      return $("ios Object");
+    }
   }
 
   get lnkSignOut() {
-    return $("//android.widget.TextView[@text='Sign out']");
+    if (driver.isAndroid) {
+      return $("//android.widget.TextView[@text='Sign out']");
+    } else {
+      return $("ios Object");
+    }
   }
 
   get lnkBack() {
-    return $("//android.widget.TextView[@text='Back']");
+    if (driver.isAndroid) {
+      return $("//android.widget.TextView[@text='Back']");
+    } else {
+      return $("ios Object");
+    }
   }
 
   async clickOnlnkBack() {

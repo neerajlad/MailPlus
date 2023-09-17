@@ -13,11 +13,19 @@ class SidePanelScreen extends Page {
    */
 
   get lnkBack() {
-    return $("//android.widget.TextView[@text='Back']");
+    if (browser.isAndroid) {
+      return $("//android.widget.TextView[@text='Back']");
+    } else {
+      // Define for other platforms (if needed)
+    }
   }
 
   get mnuManageAccount() {
-    return $("//android.widget.TextView[@text='Manage account']");
+    if (browser.isAndroid) {
+      return $("//android.widget.TextView[@text='Manage account']");
+    } else {
+      // Define for other platforms (if needed)
+    }
   }
 
   async verifymnuManageAccount() {
