@@ -126,10 +126,14 @@ class IndexPage extends Page {
   }
 
   async clickOnbtnGotItIfDisplayed() {
-    await Actions.waitForElementForDisplay(this.btnGotIt, timeout);
-    var isDisplayed = await Actions.isElementDisplayed(this.btnGotIt);
-    if (isDisplayed) {
-      await Actions.doClickOn(this.btnGotIt);
+    try {
+      await Actions.waitForElementForDisplay(this.btnGotIt, timeout);
+      var isDisplayed = await Actions.isElementDisplayed(this.btnGotIt);
+      if (isDisplayed) {
+        await Actions.doClickOn(this.btnGotIt);
+      }
+    } catch (error) {
+      console.log(error);
     }
   }
 

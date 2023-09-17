@@ -25,7 +25,7 @@ exports.config = {
   // will be called from there.
   //
   // specs: ["./features/**/Newspaper_web.feature", "./features/**/Newspaper1_web.feature"],
-  specs: ["./features/**/Newspaper_web1.feature"],
+  specs: ["./features/**/Newspaper_web.feature"],
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
@@ -74,7 +74,7 @@ exports.config = {
           "--headless",
           "--start-maximized",
           "--disable-dev-shm-usage",
-          "--window-size=1792,900",
+          // "--window-size=1792,900",
           "--enable-automation",
           "--remote-allow-origins=*",
           //"--headless",
@@ -173,7 +173,7 @@ exports.config = {
     // <string[]> (file/dir) require files before executing features
     //   require: ["./features/step-definitions/steps.js"],
     // require: ["./features/step-definitions/NewsPapersteps.web.js", "./features/step-definitions/NewsPapersteps1.web.js"],
-    require: ["./features/step-definitions/NewsPapersteps1.web.js"],
+    require: ["./features/step-definitions/NewsPapersteps.web.js"],
 
     // <boolean> show full backtrace for errors
     backtrace: false,
