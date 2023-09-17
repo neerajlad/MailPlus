@@ -21,7 +21,7 @@ class NewspaperScreen extends Page {
     if (browser.isAndroid) {
       return $("//android.widget.TextView[@text='Recent issues']");
     } else {
-      // Define for other platforms (if needed)
+      return $("ios Object");
     }
   }
 
@@ -29,7 +29,7 @@ class NewspaperScreen extends Page {
     if (browser.isAndroid) {
       return $("//android.widget.TextView[@text='Recent issues']/..//android.widget.HorizontalScrollView[2]/android.view.ViewGroup/android.view.ViewGroup[3]");
     } else {
-      // Define for other platforms (if needed)
+      return $("ios Object");
     }
   }
 
@@ -37,7 +37,7 @@ class NewspaperScreen extends Page {
     if (browser.isAndroid) {
       return $("//android.widget.TextView[@text='SEE MORE']");
     } else {
-      // Define for other platforms (if needed)
+      return $("ios Object");
     }
   }
 
@@ -45,7 +45,7 @@ class NewspaperScreen extends Page {
     if (browser.isAndroid) {
       return $("//android.widget.TextView[@text='Failover']/..//android.view.ViewGroup[1]");
     } else {
-      // Define for other platforms (if needed)
+      return $("ios Object");
     }
   }
 
@@ -53,7 +53,7 @@ class NewspaperScreen extends Page {
     if (browser.isAndroid) {
       return $("//android.widget.TextView[@text='10 April 2023']");
     } else {
-      // Define for other platforms (if needed)
+      return $("ios Object");
     }
   }
 
@@ -61,7 +61,7 @@ class NewspaperScreen extends Page {
     if (browser.isAndroid) {
       return $("(//android.widget.TextView[@text='27 June 2023'])[2]");
     } else {
-      // Define for other platforms (if needed)
+      return $("ios Object");
     }
   }
 
@@ -69,7 +69,7 @@ class NewspaperScreen extends Page {
     if (browser.isAndroid) {
       return $("(//android.widget.TextView[@text='27 June 2023'])[1]/../following-sibling::android.view.ViewGroup");
     } else {
-      // Define for other platforms (if needed)
+      return $("ios Object");
     }
   }
 
@@ -77,7 +77,7 @@ class NewspaperScreen extends Page {
     if (browser.isAndroid) {
       return $("//android.widget.TextView[@text='Tuesday, 27 June']");
     } else {
-      // Define for other platforms (if needed)
+      return $("ios Object");
     }
   }
 
@@ -90,7 +90,7 @@ class NewspaperScreen extends Page {
       // return $("//android.widget.TextView[@text='11']/.."); //
       return $("//android.widget.FrameLayout[@resource-id='android:id/content']//android.widget.FrameLayout[2]");
     } else {
-      // Define for other platforms (if needed)
+      return $("ios Object");
     }
   }
 
@@ -98,7 +98,7 @@ class NewspaperScreen extends Page {
     if (browser.isAndroid) {
       return $("//android.widget.TextView[@text='Phoebe, the chainmail champion of the Indiana Jones red carpet']");
     } else {
-      // Define for other platforms (if needed)
+      return $("ios Object");
     }
   }
 
@@ -106,7 +106,7 @@ class NewspaperScreen extends Page {
     if (browser.isAndroid) {
       return $("//android.widget.LinearLayout");
     } else {
-      // Define for other platforms (if needed)
+      return $("ios Object");
     }
   }
 
@@ -146,7 +146,7 @@ class NewspaperScreen extends Page {
     if (browser.isAndroid) {
       return $("//android.widget.TextView[@text='Close']");
     } else {
-      // Define for other platforms (if needed)
+      return $("ios Object");
     }
   }
 

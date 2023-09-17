@@ -16,7 +16,7 @@ class SidePanelScreen extends Page {
     if (browser.isAndroid) {
       return $("//android.widget.TextView[@text='Back']");
     } else {
-      // Define for other platforms (if needed)
+      return $("ios Object");
     }
   }
 
@@ -24,7 +24,7 @@ class SidePanelScreen extends Page {
     if (browser.isAndroid) {
       return $("//android.widget.TextView[@text='Manage account']");
     } else {
-      // Define for other platforms (if needed)
+      return $("ios Object");
     }
   }
 
