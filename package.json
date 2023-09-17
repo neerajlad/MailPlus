@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "wdio.mob": "wdio run ./wdio.conf.js",
     "wdio.web": "wdio run ./wdio.conf.web.js",
-    "wdio.web.bs": "wdio run ./wdio.conf.web.bs.js"
+    "wdio.web.bs": "wdio run ./wdio.conf.web.bs.js",
+    "wdio.mob.bs": "wdio run ./wdio.conf.mob.bs.js"
   },
   "keywords": [],
   "author": "",

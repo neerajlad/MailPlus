@@ -298,7 +298,7 @@ class NewspaperScreen extends Page {
   }
 
   async tapOnGallary() {
-    await CommonLib.wait(2000);
+    await CommonLib.wait(5000);
     await Actions.tapByCoordinateSelector(500, 500, await this.lblImageCount);
     console.log("tapped on gallary");
   }
