@@ -8,12 +8,24 @@ on:
       typeOfTesting:
         type: choice
         description: Select Type of Test
-        default: "Stage-Suite-1-Trade"
+        default: "wdio.web"
         required: true
         options:
           - wdio.mob
           - wdio.web
           - wdio.web.bs
+      bsUserName:
+        description: "BrowserStack Username"
+        required: true
+        type: string
+      bsUserKey:
+        description: "BrowserStack Key"
+        required: true
+        type: string
+      bsAppPath:
+        description: "Set BrowserStack app path {Note: If you run app then set this}"
+        required: false
+        type: string
 
 jobs:
   WebdriverIO-Automation:
@@ -31,4 +43,4 @@ jobs:
         run: npm install
       - name: Test
         run: |
-          npm run ${{ github.event.inputs.typeOfTesting == '' && github.event.inputs.typeOfTesting  || 'wdio.web' }}
+          BSUSERNAME=${{ github.event.inputs.bsUserName }} BSKEY=${{ github.event.inputs.bsUserKey }} BSAPPPATH=${{ github.event.inputs.bsAppPath }} npm run ${{ github.event.inputs.typeOfTesting == '' && github.event.inputs.typeOfTesting  || 'wdio.web' }}
