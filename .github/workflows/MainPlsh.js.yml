@@ -14,6 +14,7 @@ on:
           - wdio.mob
           - wdio.web
           - wdio.web.bs
+          - wdio.mob.bs
       bsUserName:
         description: "BrowserStack Username"
         required: true
