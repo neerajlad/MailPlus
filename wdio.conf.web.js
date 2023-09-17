@@ -71,7 +71,7 @@ exports.config = {
           "--disable-javascript",
           "--disable-javascript-harmony-shipping",
           "--no-sandbox",
-          // "--headless",
+          "--headless",
           "--start-maximized",
           "--disable-dev-shm-usage",
           "--window-size=1792,900",
