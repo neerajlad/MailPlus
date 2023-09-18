@@ -180,7 +180,7 @@ class IndexPage extends Page {
       await Actions.waitUntilElement(this.lblAdvertisement, 20000);
       await Actions.waitForElementForNotDisplay(this.lblAdvertisement, 15000);
     } catch (error) {
-      console.log(error);
+      console.log("Ads Not displayed");
     }
   }
 }

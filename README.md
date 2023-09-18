@@ -17,3 +17,5 @@
     BSUSERNAME=<UserName> BSKEY=<Key> npm run wdio.web.bs
 
 # To Run On CICD Environment, Use GitHub Action tab for Web
+
+# Note: Copy mobile app under test file at ./TestP/features/app and change name in `wdio.conf.js` under `capabilities` section.
